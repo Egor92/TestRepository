@@ -11,6 +11,6 @@
         <copyright>Egor92</copyright>
     </metadata>
     <files>
-        <file src="bin\Release\TestRepository.dll" target="v1.0\TestRepository.dll" />
+        <file src="bin\Release\TestRepository.dll" target="TestRepository.dll" />
     </files>
 </package>
