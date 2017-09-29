@@ -16,7 +16,7 @@ before_build:
   - nuget restore "./src/TestRepository.sln"
 
 build:
-  project: 'src\TestRepository.sln'
+  project: src\TestRepository.sln
   publish_nuget: true
   
 test:
