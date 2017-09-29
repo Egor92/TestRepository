@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>TestRepository</id>
         <version>1.0.0</version>
@@ -9,11 +9,6 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>This is test library</description>
         <copyright>Egor92</copyright>
-        <dependencies>
-            <group targetFramework=".NETFramework4.5">
-                <dependency id="Newtonsoft.Json" version="10.0.3" />
-            </group>
-        </dependencies>
     </metadata>
     <files>
         <file src="bin\Release\TestRepository.dll" target="v1.0\TestRepository.dll" />
