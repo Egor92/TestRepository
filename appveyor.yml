@@ -13,10 +13,10 @@ assembly_info:
   assembly_informational_version: "{version}"
   
 before_build:
-  - nuget restore "./src/TestRepository.sln"
+  - nuget restore "./src/{APPVEYOR_PROJECT_NAME}.sln"
 
 build:
-  project: src\TestRepository.sln
+  project: src\{APPVEYOR_PROJECT_NAME}.sln
   publish_nuget: true
   
 test:
@@ -29,7 +29,7 @@ artifacts:
   
 deploy_script:
   - appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe  
-  - ps: ($artifacts.values | Where-Object {($_.path -like '*.nupkg') -and  !($_.path -like '*.symbols.nupkg')}) | foreach-object {nuget.exe push $_.path -Source https://www.nuget.org/api/v2/package -ApiKey 41f5af1a-5d34-42ec-a808-0ad3dcfbcb8d; if ($lastexitcode -ne 0) {throw}}
+  - ps: ($artifacts.values | Where-Object {($_.path -like '*.nupkg') -and  !($_.path -like '*.symbols.nupkg')}) | foreach-object {nuget.exe push $_.path -Source https://www.nuget.org/api/v2/package -ApiKey $env:api_key; if ($lastexitcode -ne 0) {throw}}
   
 deploy:
   # Deploying to NuGet feed
