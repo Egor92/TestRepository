@@ -13,7 +13,7 @@ assembly_info:
   assembly_informational_version: "{version}"
   
 before_build:
-  - nuget restore "./src/{APPVEYOR_PROJECT_NAME}.sln"
+  - nuget restore ./src/{APPVEYOR_PROJECT_NAME}.sln
 
 build:
   project: src\{APPVEYOR_PROJECT_NAME}.sln
