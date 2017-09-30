@@ -4,10 +4,6 @@ platform: Any CPU
 configuration: Release
 
 skip_tags: true
-
-environment:
-  nuget_api_key:
-    secure: hysu+0QY9osBXSmEoHFV/vwKk1WHbEzBb2OKV8LnAmd15lKW+mmvGgkmlwxfJM0A
     
 assembly_info:
   patch: true
@@ -30,10 +26,6 @@ test:
 artifacts:  
   - path: /.*\.nupkg/
     name: NuGet package
-  
-deploy_script:
-  - appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/latest/nuget.exe  
-  - ps: ($artifacts.values | Where-Object {($_.path -like '*.nupkg') -and  !($_.path -like '*.symbols.nupkg')}) | foreach-object {nuget.exe push $_.path -Source https://www.nuget.org/api/v2/package -ApiKey bc993d0c-19b1-41d8-b8e1-4adba9f96b6f; if ($lastexitcode -ne 0) {throw}}
   
 deploy:
   # Deploying to NuGet feed
