@@ -4,16 +4,16 @@
         <id>$APPVEYOR_PROJECT_NAME$</id>
         <version>$version$</version>
         <title>$APPVEYOR_PROJECT_NAME$</title>
-        <authors>Novikov Egor</authors>
-        <owners>Novikov Egor</owners>
-        <licenseUrl>https://github.com/Egor92/TestRepository/blob/master/LICENSE</licenseUrl>
-        <projectUrl>https://github.com/Egor92/TestRepository</projectUrl>
+        <authors>$author_name$</authors>
+        <owners>$author_name$</owners>
+        <licenseUrl>https://github.com/$APPVEYOR_REPO_NAME$/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/$APPVEYOR_REPO_NAME$</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>This is test library</description>
-        <copyright>Egor92</copyright>
+        <copyright>Copyright © 2017 $author_name$</copyright>
         <tags></tags>
     </metadata>
     <files>
-        <file src="bin\Release\TestRepository.dll" target="TestRepository.dll" />
+        <file src="bin\Release\$APPVEYOR_PROJECT_NAME$.dll" target="$APPVEYOR_PROJECT_NAME$.dll" />
     </files>
 </package>
