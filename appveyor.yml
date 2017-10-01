@@ -4,7 +4,7 @@ platform: Any CPU
 configuration: Release
 
 skip_tags: true
-    
+  
 assembly_info:
   patch: true
   file: '**\AssemblyInfo.*'

@@ -4,13 +4,13 @@
         <id>$APPVEYOR_PROJECT_NAME$</id>
         <version>$version$</version>
         <title>$APPVEYOR_PROJECT_NAME$</title>
-        <authors>$author_name$</authors>
-        <owners>$author_name$</owners>
+        <authors>Novikov Egor</authors>
+        <owners>Novikov Egor</owners>
         <licenseUrl>https://github.com/$APPVEYOR_REPO_NAME$/blob/master/LICENSE</licenseUrl>
         <projectUrl>https://github.com/$APPVEYOR_REPO_NAME$</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>This is test library</description>
-        <copyright>Copyright © 2017 $author_name$</copyright>
+        <copyright>Copyright © 2017 Novikov Egor</copyright>
         <tags></tags>
     </metadata>
     <files>
