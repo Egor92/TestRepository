@@ -1,14 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
-        <id>TestRepository</id>
-        <version>1.0.0</version>
-        <title>TestRepository</title>
-        <authors>Egor92</authors>
-        <owners>Egor92</owners>
+        <id>$APPVEYOR_PROJECT_NAME$</id>
+        <version>$version$</version>
+        <title>$APPVEYOR_PROJECT_NAME$</title>
+        <authors>Novikov Egor</authors>
+        <owners>Novikov Egor</owners>
+        <licenseUrl>https://github.com/Egor92/TestRepository/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/Egor92/TestRepository</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>This is test library</description>
         <copyright>Egor92</copyright>
+        <tags></tags>
     </metadata>
     <files>
         <file src="bin\Release\TestRepository.dll" target="TestRepository.dll" />
